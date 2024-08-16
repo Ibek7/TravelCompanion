@@ -13,7 +13,7 @@ namespace TravelCompanion.MAUI.ViewModels
 
         public ICommand SignInCommand => new Command(async () =>
         {
-            MauiProgram.ApiKey = "cf21c5a9-ec51-4e02-a6dd-9f5bf7b8c703";
+            MauiProgram.ApiKey = "YOUR_API_KEY";  // add your api key over here
             var appUserClient = MauiProgram.ServiceProvider.GetRequiredService<AppUserClient>();
             var user = await appUserClient.GetUser();
             MauiProgram.CurrentUser = user;

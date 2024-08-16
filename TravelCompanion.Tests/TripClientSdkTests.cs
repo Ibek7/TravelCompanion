@@ -25,7 +25,7 @@ namespace TravelCompanion.Tests
         public void TestCreateTrip()
         {
             var appUserService = ServiceProvider.GetRequiredService<AppUserService>();
-            var appUser = appUserService.GetByEmailAsync("bekamdawit551@gmail.com").Result;
+            var appUser = appUserService.GetByEmailAsync("YOUR@gmail.com").Result; // add your email address
 
             var tripClient = ServiceProvider.GetRequiredService<TripClient>();
             var tripDto = new TripDto

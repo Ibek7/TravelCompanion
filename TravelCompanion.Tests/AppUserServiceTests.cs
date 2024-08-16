@@ -11,7 +11,7 @@ namespace TravelCompanion.Tests
         public void TestGetByEmailAsync()
         {
             var appUserService = ServiceProvider.GetRequiredService<AppUserService>();
-            var email = "max.szczurek@gmail.com";
+            var email = "USER@gmail.com"; // replace this with your email address
             var user = appUserService.GetByEmailAsync(email).Result;
             Assert.IsNotNull(user);
             Console.WriteLine(user.ConvertToJson());
