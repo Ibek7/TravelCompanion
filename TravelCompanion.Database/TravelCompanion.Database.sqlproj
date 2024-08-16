@@ -65,7 +65,4 @@
     <Build Include="Tables\TripChat.sql" />
     <Build Include="Tables\TripEvent.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="PostDeployment.sql" />
-  </ItemGroup>
 </Project>
