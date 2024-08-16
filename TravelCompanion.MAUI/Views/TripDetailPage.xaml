@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+                x:Class="TravelCompanion.MAUI.Views.TripDetailPage"
+                BackgroundColor="{StaticResource White}">
+
+    <!-- Overlay Grid for Back Button -->
+    <Grid>
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="20">
+                <!-- Title -->
+                <Label Text="Trip Details"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="{StaticResource Primary}" 
+                       Margin="0,20,0,30"/> <!-- Added margin below the title to move content lower -->
+
+                <!-- Go to Chat Button -->
+                <Button Text="Go to Chat"
+                        Clicked="OnChatButtonClicked"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,20,0,20"
+                        FontAttributes="Bold"
+                        HeightRequest="50"/>
+
+                <!-- Analyze Image Button -->
+                <Button Text="Analyze Image"
+                        Clicked="OnAnalyzeImageButtonClicked"
+                        BackgroundColor="{StaticResource AccentColor}"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="0,20,0,20"
+                        FontAttributes="Bold"
+                        HeightRequest="50"/>
+
+                <!-- Schedule and Memories Sections -->
+                <Frame BackgroundColor="{StaticResource LightGray}"
+                       CornerRadius="20"
+                       Padding="15"
+                       Margin="0,10,0,10">
+                    <StackLayout>
+                        <Label Text="Real-time Schedule"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource Primary}" />
+
+                        <Label Text="Daily Schedule"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource Primary}"
+                               Margin="0,10,0,0"/>
+
+                        <Label Text="Memories"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="{StaticResource Primary}"
+                               Margin="0,10,0,0"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Custom Back Button -->
+        <Button Text="←" 
+                Clicked="OnHomeButtonClicked" 
+                WidthRequest="40" 
+                HeightRequest="40"
+                BackgroundColor="{StaticResource Primary}" 
+                TextColor="White" 
+                CornerRadius="20"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start"
+                Margin="10,0,0,0"/>
+    </Grid>
+</views:BasePage>

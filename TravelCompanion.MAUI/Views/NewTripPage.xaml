@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.NewTripPage"
+             BackgroundColor="{StaticResource White}">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="New Trip"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0, 20, 0, 20" />
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging Name" FontSize="18" />
+                    <Entry x:Name="lodgingNameEntry" Placeholder="Enter lodging name" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging Address" FontSize="18" />
+                    <Entry x:Name="lodgingAddressEntry" Placeholder="Enter lodging address" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging City" FontSize="18" />
+                    <Entry x:Name="lodgingCityEntry" Placeholder="Enter lodging city" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging State" FontSize="18" />
+                    <Entry x:Name="lodgingStateEntry" Placeholder="Enter lodging state" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging Country" FontSize="18" />
+                    <Entry x:Name="lodgingCountryEntry" Placeholder="Enter lodging country" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Lodging Postal Code" FontSize="18" />
+                    <Entry x:Name="lodgingPostalCodeEntry" Placeholder="Enter lodging postal code" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Arrival Date" FontSize="18" />
+                    <DatePicker x:Name="arrivalDatePicker" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Departure Date" FontSize="18" />
+                    <DatePicker x:Name="departureDatePicker" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Trip Notes" FontSize="18" />
+                    <Editor x:Name="tripNotesEditor" Placeholder="Enter any notes for the trip" />
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Create Trip" 
+                    Clicked="OnNewTripClicked" 
+                    Style="{StaticResource CardButtonStyle}" />
+        </StackLayout>
+    </ScrollView>
+</views:BasePage>

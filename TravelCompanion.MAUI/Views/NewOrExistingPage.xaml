@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.NewOrExistingPage"
+             BackgroundColor="{StaticResource White}">
+    <StackLayout Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Label Text="Do you want to create a new trip or view existing trips?"
+               FontSize="20"
+               HorizontalOptions="Center"/>
+        <Button Text="New" Clicked="OnNewTripClicked" Style="{StaticResource CardButtonStyle}" />
+        <Button Text="Existing" Clicked="OnExistingTripClicked" Style="{StaticResource CardButtonStyle}" />
+    </StackLayout>
+</views:BasePage>

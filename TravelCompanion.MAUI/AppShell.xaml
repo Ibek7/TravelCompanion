@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TravelCompanion.MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TravelCompanion.MAUI.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TravelCompanion.MAUI">
+    
+    <ShellContent Title="Authentication" ContentTemplate="{DataTemplate local:AuthenticationPage}" Route="AuthenticationPage" />
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage" />
+    <ShellContent Title="Trip Planning" ContentTemplate="{DataTemplate local:TripPlanningPage}" Route="TripPlanningPage" />
+    <ShellContent Route="NewOrExistingPage" ContentTemplate="{DataTemplate local:NewOrExistingPage}" />
+    <ShellContent Route="NewTripPage" ContentTemplate="{DataTemplate local:NewTripPage}" />
+    <ShellContent Title="ExistingTrips" ContentTemplate="{DataTemplate local:ExistingTripsPage}" Route="ExistingTripsPage"/>
+    <ShellContent Route="TripDetailPage" ContentTemplate="{DataTemplate local:TripDetailPage}" />
+    <ShellContent Title="Schedule" ContentTemplate="{DataTemplate local:SchedulePage}" Route="SchedulePage" />
+    <ShellContent Title="Real-time Assistance" ContentTemplate="{DataTemplate local:RealTimeAssistancePage}" Route="RealTimeAssistancePage" />
+     <ShellContent Title="Chat" ContentTemplate="{DataTemplate local:ChatPage}" Route="ChatPage" />
+     <ShellContent Title="Image Analyzer" ContentTemplate="{DataTemplate local:ImageAnalyzerPage}" Route="ImageAnalyzerPage" />
+    <ShellContent Title="Memory Creation" ContentTemplate="{DataTemplate local:MemoryCreationPage}" Route="MemoryCreationPage" />
+    <ShellContent Title="Settings" ContentTemplate="{DataTemplate local:SettingsPage}" Route="SettingsPage" />
+    <ShellContent Title="Community Features" ContentTemplate="{DataTemplate local:CommunityPage}" Route="CommunityPage" />
+    
+</Shell>

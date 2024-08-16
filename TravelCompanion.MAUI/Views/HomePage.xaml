@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.HomePage"
+             BackgroundColor="{StaticResource White}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Top bar with accessibility and profile sections -->
+        <Grid Grid.Row="0" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <!-- Hamburger menu on the left -->
+            <ImageButton Source="hamburger_icon.png"
+                         HeightRequest="30"
+                         WidthRequest="30"
+                         Clicked="OnHamburgerMenuClicked"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Start" />
+
+            <!-- Profile section on the right -->
+            <ImageButton Grid.Column="2"
+                         Source="profile_icon.png"
+                         HeightRequest="30"
+                         WidthRequest="30"
+                         Clicked="OnProfileClicked"
+                         VerticalOptions="Center"
+                         HorizontalOptions="End" />
+        </Grid>
+
+        <!-- Welcome and Wonder bars section -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Padding="20">
+                <Label Text="Welcome"
+                       Style="{StaticResource WelcomeLabelStyle}" 
+                       HorizontalOptions="Center"
+                       FontSize = "25"
+                       Margin="0, 20, 0, 0"/> <!-- Added Margin to move Welcome higher -->
+                <Grid x:Name="imageGrid" Padding="20" ColumnSpacing="10" RowSpacing="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Row="0" Style="{StaticResource CardStyle}">
+                        <Image Source="first_wonder.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="1" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder4.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="2" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder9.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="3" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder8.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="4" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder7.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="5" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder10.png" Aspect="AspectFill"/>
+                    </Frame>
+                    <Frame Grid.Row="6" Style="{StaticResource CardStyle}">
+                        <Image Source="wonder11.png" Aspect="AspectFill"/>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Trip Planning bar at the bottom -->
+        <Frame Grid.Row="2"
+               HeightRequest="60"
+               BackgroundColor="{StaticResource Primary}"
+               VerticalOptions="End"
+               HorizontalOptions="FillAndExpand">
+            <Button Text="Trip Planning"
+                    Style="{StaticResource CardButtonStyle}"
+                    TextColor="{StaticResource White}" 
+                    Clicked="OnTripPlanningClicked" />
+        </Frame>
+
+        <!-- Hamburger menu overlay -->
+        <StackLayout x:Name="HamburgerMenu"
+                     BackgroundColor="White"
+                     Padding="20"
+                     IsVisible="False"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Margin="0, 50, 0, 0">
+            <Button Text="Close"
+                    FontSize="18"
+                    Clicked="OnCloseMenuClicked" 
+                     Margin="0, 5, 0, 5"/>
+            <Button Text="Settings"
+                    FontSize="18" 
+                    Clicked="OnSettingsClicked"
+                     Margin="0, 5, 0, 5"/>
+            <Button Text="Daily Schedule"
+                    FontSize="18" 
+                    Clicked="OnDailyScheduleClicked"/>
+            <Button Text="Real Time Assistance"
+                    FontSize="18" 
+                     Margin="0, 5, 0, 5"/>
+        </StackLayout>
+    </Grid>
+</views:BasePage>

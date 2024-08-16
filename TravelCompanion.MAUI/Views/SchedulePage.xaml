@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelCompanion.MAUI.ViewModels"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="TravelCompanion.MAUI.Views.SchedulePage">
+
+    <syncfusion:SfScheduler x:Name="scheduler" 
+                       AppointmentsSource="{Binding Data}"
+                       View="Week" >
+<syncfusion:SfScheduler.AppointmentMapping>
+<syncfusion:SchedulerAppointmentMapping
+                Subject="EventName"
+                StartTime="From"
+                EndTime="To"/>
+</syncfusion:SfScheduler.AppointmentMapping>
+</syncfusion:SfScheduler>
+
+    
+</ContentPage>

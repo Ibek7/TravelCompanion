@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.MemoryCreationPage">
+    <StackLayout>
+        <Label Text="Memory Creation" 
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="CenterAndExpand" />
+        <Button Text="Take Photo" Command="{Binding TakePhotoCommand}" />
+        <CollectionView ItemsSource="{Binding Photos}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding ImageSource}" Text="{Binding Caption}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</views:BasePage>

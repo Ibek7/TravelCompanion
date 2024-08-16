@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.SettingsPage"
+             BackgroundColor="{StaticResource White}">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Settings"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0, 20, 0, 20" />
+                   
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Profile" FontSize="18" />
+                    <Button Text="Edit Profile" 
+                            Clicked="OnEditProfileClicked" 
+                            Style="{StaticResource CardButtonStyle}" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Notifications" FontSize="18" />
+                    <Switch x:Name="NotificationsSwitch" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Privacy" FontSize="18" />
+                    <Button Text="Manage Privacy Settings" 
+                            Clicked="OnPrivacySettingsClicked" 
+                            Style="{StaticResource CardButtonStyle}" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Language" FontSize="18" />
+                    <Picker x:Name="LanguagePicker">
+                        <Picker.Items>
+                            <x:String>English</x:String>
+                            <x:String>Spanish</x:String>
+                            <x:String>French</x:String>
+                            <x:String>German</x:String>
+                            <x:String>Chinese</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Dark Mode" FontSize="18" />
+                    <Switch x:Name="ThemeSwitch" Toggled="OnThemeToggled" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</views:BasePage>

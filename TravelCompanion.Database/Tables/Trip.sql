@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[Trip]
+(
+	[TripId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[TripGuid] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID(),
+	AppUserId INT NOT NULL FOREIGN KEY REFERENCES AppUser(AppUserId),
+	LodgingName NVARCHAR(100) NULL,
+	LodgingAddress NVARCHAR(100) NULL,
+	LodgingCity NVARCHAR(100) NULL,
+	LodgingState NVARCHAR(100) NULL,
+	LodgingCountry NVARCHAR(100) NULL,
+	LodgingPostalCode NVARCHAR(100) NULL,
+	ArrivalDate DATE NULL,
+	DepartureDate DATE NULL,
+	TripNotes NVARCHAR(MAX) NULL
+)

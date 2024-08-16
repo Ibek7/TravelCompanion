@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:TravelCompanion.MAUI.Views"
+             x:Class="TravelCompanion.MAUI.Views.TripPlanningPage"
+             BackgroundColor="{StaticResource White}">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="Plan Your Trip"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0, 20, 0, 20" />
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Destination" FontSize="18" />
+                    <Entry x:Name="destinationEntry" Placeholder="Enter destination" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Duration" FontSize="18" />
+                    <Entry x:Name="durationEntry" Placeholder="Enter duration" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Budget" FontSize="18" />
+                    <Entry x:Name="budgetEntry" Placeholder="Enter budget" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Number of People" FontSize="18" />
+                    <Entry x:Name="numberOfPeopleEntry" Placeholder="Enter number of people" />
+                </StackLayout>
+            </Frame>
+
+            <Frame Padding="10" Margin="0, 5">
+                <StackLayout>
+                    <Label Text="Interests" FontSize="18" />
+                    <Entry x:Name="interestsEntry" Placeholder="Enter interests" />
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Submit Trip"
+                    Command="{Binding SubmitTripCommand}"
+                    Style="{StaticResource CardButtonStyle}" />
+        </StackLayout>
+    </ScrollView>
+</views:BasePage>
