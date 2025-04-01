@@ -2,6 +2,26 @@
 
 TravelCompanion is a multi-project solution designed to provide a travel companion experience through a mobile application built using .NET MAUI. The solution includes API, database, SDK, and mobile app components, as well as unit tests.
 
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="469" alt="Screenshot 2025-04-01 at 2 04 08 PM" src="https://github.com/user-attachments/assets/3f967b8a-1093-4438-9e9a-e6f9135f4a83" />
+<img width="468" alt="Screenshot 2025-04-01 at 2 04 34 PM" src="https://github.com/user-attachments/assets/1b89007c-6294-4fe4-91d1-cb47ba26f237" />
+<img width="461" alt="Screenshot 2025-04-01 at 2 05 10 PM" src="https://github.com/user-attachments/assets/5d5a2fde-5b9e-41d3-a4cc-068ddeb8f4ec" />
+<img width="466" alt="Screenshot 2025-04-01 at 2 06 43 PM" src="https://github.com/user-attachments/assets/ae3692ec-d154-4799-9e24-325b7d9d00d4" />
+<img width="462" alt="Screenshot 2025-04-01 at 2 07 22 PM" src="https://github.com/user-attachments/assets/a507a8b8-9d4c-4b00-9ec0-01f5d0a24f7e" />
+<img width="462" alt="Screenshot 2025-04-01 at 2 13 18 PM" src="https://github.com/user-attachments/assets/3923f7c5-13d6-4ca9-895c-fb37a363665a" />
+
+
 ## Projects
 
 ### 1. TravelCompanion.API
